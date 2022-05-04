@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Elliptic Curves</string>
+    <string name="alice">Alice</string>
+    <string name="bob">Bob</string>
+    <string name="p_and_g">P and G</string>
+    <string name="calc_key">Calc key</string>
+    <string name="reset">Reset</string>
+    <string name="PersonImage">person image</string>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/header" android:id="@+id/header"/>
+
+    <ImageView
+        android:id="@+id/AliceImage"
+        android:layout_width="114dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:srcCompat="@drawable/person"
+        android:contentDescription="@string/PersonImage" />
+
+    <ImageView
+        android:id="@+id/BobImage"
+        android:layout_width="114dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/AliceImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AliceImage"
+        app:layout_constraintTop_toTopOf="@+id/AliceImage"
+        app:srcCompat="@drawable/person"
+        android:contentDescription="@string/PersonImage" />
+
+    <TextView
+        android:id="@+id/Alice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/alice"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/AliceImage"
+        app:layout_constraintStart_toStartOf="@+id/AliceImage"
+        app:layout_constraintTop_toBottomOf="@+id/AliceImage" />
+
+    <TextView
+        android:id="@+id/Bob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/bob"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/BobImage"
+        app:layout_constraintStart_toStartOf="@+id/BobImage"
+        app:layout_constraintTop_toBottomOf="@+id/BobImage" />
+
+    <TextView
+        android:id="@+id/PandG"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/p_and_g"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/AliceInfo"
+        app:layout_constraintTop_toBottomOf="@+id/BobInfo" />
+
+    <TextView
+        android:id="@+id/AliceInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/BobInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alice" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/calc_key"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/BobImage"
+        app:layout_constraintStart_toStartOf="@+id/AliceImage"
+        app:layout_constraintTop_toBottomOf="@+id/PandG" />
+
+    <Button
+        android:id="@+id/Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/reset"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/calcButton"
+        app:layout_constraintStart_toStartOf="@+id/calcButton"
+        app:layout_constraintTop_toBottomOf="@+id/calcButton" />
+
+    <TextView
+        android:id="@+id/BobInfo"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="@+id/Bob"
+        app:layout_constraintTop_toTopOf="@+id/AliceInfo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
